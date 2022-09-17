@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        // Setup Rigidbody for frictionless top down movement and dynamic collision
         rigidbody2D = GetComponent<Rigidbody2D>();
 
         rigidbody2D.isKinematic = false;
@@ -99,7 +98,6 @@ public class PlayerController : MonoBehaviour
                 _animator.SetBool("Run", true);
             }
 
-            // rigidbody2D.velocity = newforce * Time.deltaTime;
             rigidbody2D.velocity = newforce;
 
         }
